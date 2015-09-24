@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  var errorMessage="";
+
   $("#validationForm").submit(function(event) {
 
   event.preventDefault();
@@ -9,7 +11,13 @@ $(document).ready(function(){
     return pattern.test(emailAddress);
   };
       if (!isValidEmailAddress($("#email").val())) {
-        $("#error").html("Please enter a valid email address");
+        errorMessage="<br>Please enter a valid email address";
   }
+
+      if (!$.isNumeric($("#phone").val())){
+        errorMessage=errorMessage+"<br>Please enter a valid phone number";
+    }
+
+  $("#error").html(errorMessage);
 });
 });
