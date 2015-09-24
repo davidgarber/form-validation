@@ -18,6 +18,16 @@ $(document).ready(function(){
         errorMessage=errorMessage+"<br>Please enter a valid phone number";
     }
 
+      if ($("#pass1").val()!=$("pass2").val()){
+        errorMessage=errorMessage+"<br>Please enter matching passwords";
+    }
+
+      if (errorMessage=="") {
+        alert("Success!")
+      } else {
+
   $("#error").html(errorMessage);
+      }
+
 });
 });
