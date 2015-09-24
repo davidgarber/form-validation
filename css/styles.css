@@ -7,15 +7,16 @@
 
 input {
   width: 300px;
-  height: 40px;
+  height: 30px;
   padding: 5px;
   border-radius: 5px;
   font-size: 1.2em;
   border: 1px solid grey;
+  margin-bottom: 10px;
 }
 
 label {
   width: 150px;
   float: left;
-  padding-top: 10px;
+  padding-top: 7px;
 }
